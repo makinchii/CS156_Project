@@ -53,7 +53,7 @@ If the last line prints a path inside `.venv` and a pandas version, you’re goo
 * **In Colab:** open a notebook’s GitHub URL, or use this pattern:
 
   ```
-  https://colab.research.google.com/github/<org-or-user>/<repo>/blob/main/notebooks/01_exploration.ipynb
+  https://colab.research.google.com/github/makinchii/CS156_Project/blob/main/notebooks/<notebook.ipynb>
   ```
 * **Data path in notebooks:**
 
