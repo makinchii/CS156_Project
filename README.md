@@ -74,16 +74,41 @@ sys.path.append(str(pathlib.Path().resolve() / 'src'))
 import utils
 ```
 ---
+## Colab Workflow
 
-## Reproducibility in Colab
+1. **Open from GitHub**
 
-At the **top** of each notebook, add:
+  Use the pattern:
+
+```
+https://colab.research.google.com/github/<org-or-user>/<repo>/blob/main/notebooks/<file>.ipynb
+```
+
+2. **Install deps (per-run)**
+
+  First cell:
 
 ```python
-# Ensures everyone uses the same libs in Colab
 !pip -q install -r requirements.txt
 ```
 
-Then **Runtime → Restart runtime** when prompted.
+3. **Work normally**
+
+  Run cells, generate figures, etc. Use data paths relative to repo, e.g.:
+
+```python
+import pandas as pd
+df = pd.read_csv('data/biosensor_dataset_with_target.csv')
+```
+
+4. **Save back to GitHub**
+
+  `File → Save a copy to GitHub` → choose branch (prefer your feature branch), add a commit message
+
+> If you pick **Save a copy in Drive**, that saves to your Drive only. To share with the repo, always **Save a copy to GitHub**.
+
+5. **Open a PR** (if on a feature branch)
+
+  On GitHub, open a Pull Request from your branch to `main`. Someone should and will merge with main branch.
 
 ---
