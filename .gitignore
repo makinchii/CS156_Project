@@ -69,3 +69,6 @@ docs/_build/
 # ipython_config.py
 # profile_default/
 
+data/features
+data/windows_multi_final
+
